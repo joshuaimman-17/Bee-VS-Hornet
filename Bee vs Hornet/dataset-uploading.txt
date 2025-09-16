@@ -1,0 +1,17 @@
+# Install Kaggle API
+!pip install kaggle
+
+# Upload kaggle.json (run this, then upload the file via the prompt)
+from google.colab import files
+files.upload()
+
+# Set up Kaggle directory and permissions
+!mkdir ~/.kaggle
+!cp kaggle.json ~/.kaggle/kaggle.json
+!chmod 600 ~/.kaggle/kaggle.json
+
+# Download the dataset
+!kaggle datasets download -d jerzydziewierz/bee-vs-wasp
+
+# Unzip
+!unzip bee-vs-wasp.zip
